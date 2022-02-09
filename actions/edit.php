@@ -25,7 +25,7 @@ if (isset($_POST['update'])) {
 	else {
 		$result = mysqli_query($mysqli, "UPDATE contact SET name='$name',age='$age', phone='$phone', email='$email' WHERE id=$id");
 		echo "<script type='text/javascript'>
-			alert('Delete Successfully');
+			alert('Edit Successfully');
 			window.location.href = '../index.php';
 		</script>";
 	}
