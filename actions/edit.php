@@ -24,7 +24,10 @@ if (isset($_POST['update'])) {
 	} 
 	else {
 		$result = mysqli_query($mysqli, "UPDATE contact SET name='$name',age='$age', phone='$phone', email='$email' WHERE id=$id");
-		header("Location: ../index.php");
+		echo "<script type='text/javascript'>
+			alert('Delete Successfully');
+			window.location.href = '../index.php';
+		</script>";
 	}
 }
 ?>
