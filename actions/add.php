@@ -1,7 +1,8 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-	<title>Add Contact</title>
+	<title>Add Data</title>
+	<meta name="description" content="Add new contact">
 </head>
 
 <body>

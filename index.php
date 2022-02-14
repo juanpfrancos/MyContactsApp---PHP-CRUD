@@ -3,11 +3,14 @@ include_once("connect.php");
 $result = mysqli_query($mysqli, "SELECT * FROM contact");
 ?>
 
-<html>
+<!doctype html>
+<html lang="en">
 <head>
 	<title>Welcome to my contact App</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel="stylesheet" href="./assets/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Simple Web Application developed by Juan Pablo Franco S.">
 </head>
 
 <body>
