@@ -23,6 +23,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM contact");
 			<td>Phone <i class="fa-solid fa-phone"></i></td>
 			<td>Email <i class="fas fa-envelope"></i></td>
 			<td>Actions <i class="fa-solid fa-exclamation"></i></td>
+			<td><i class="fa-solid fa-magnifying-glass"></i></td>
 		</tr>
 		<?php
 			while ($res = mysqli_fetch_array($result)) {
@@ -31,7 +32,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM contact");
 				echo "<td>" . $res['age'] . "</td>";
 				echo "<td>" . $res['phone'] . "</td>";
 				echo "<td>" . $res['email'] . "</td>";
-				echo "<td><a href=\"./actions/edit.php?id=$res[id]\"><i class='fas fa-edit'></i></a> | 
+				echo "<td colspan='2' class='actions'><a href=\"./actions/edit.php?id=$res[id]\"><i class='fas fa-edit'></i></a> | 
 								<a href=\"./actions/delete.php?id=$res[id]\" 
 									onClick=\"return confirm('Are you sure you want to delete?')\"><i class='fas fa-trash'></i>
 								</a>
