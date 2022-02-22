@@ -23,7 +23,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM contact");
 			<td>Phone <i class="fa-solid fa-phone"></i></td>
 			<td>Email <i class="fas fa-envelope"></i></td>
 			<td>Actions <i class="fa-solid fa-exclamation"></i></td>
-			<td><i class="fa-solid fa-magnifying-glass"></i></td>
+			<td><i class="fa-solid fa-magnifying-glass" onclick=""></i></td>
 		</tr>
 		<?php
 			while ($res = mysqli_fetch_array($result)) {
