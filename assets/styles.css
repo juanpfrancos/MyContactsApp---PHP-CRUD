@@ -77,13 +77,17 @@ i {
   text-transform: uppercase;
 }
 
+#add,
 .add {
   display: flex;
   justify-content: center;
   margin: 2em;
 }
+#add a:visited,
 .add a:visited,
+#add a:link,
 .add a:link,
+#add a:active,
 .add a:active {
   font-size: 4em;
   color: white;
