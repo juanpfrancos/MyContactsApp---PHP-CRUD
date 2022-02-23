@@ -91,3 +91,12 @@ i {
 .actions {
   text-align: center;
 }
+
+#search {
+  width: 400px;
+}
+#searchContainer {
+  display: none;
+  justify-content: center;
+  margin: 2em;
+}

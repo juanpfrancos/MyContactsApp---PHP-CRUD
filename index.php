@@ -16,14 +16,18 @@ $result = mysqli_query($mysqli, "SELECT * FROM contact");
 </head>
 
 <body>
+	<div id="searchContainer">
+		<input id="search" placeholder="Search">
+	</div>	
+	
 	<table>
 		<tr>
-			<td>Name <i class="fa-solid fa-user-tie"></i></td>
-			<td>Age <i class="fas fa-birthday-cake"></i></td>
-			<td>Phone <i class="fa-solid fa-phone"></i></td>
-			<td>Email <i class="fas fa-envelope"></i></td>
-			<td>Actions <i class="fa-solid fa-exclamation"></i></td>
-			<td><i class="fa-solid fa-magnifying-glass" onclick=""></i></td>
+			<th>Name <i class="fa-solid fa-user-tie"></i></th>
+			<th>Age <i class="fas fa-birthday-cake"></i></th>
+			<th>Phone <i class="fa-solid fa-phone"></i></th>
+			<th>Email <i class="fas fa-envelope"></i></th>
+			<th>Actions <i class="fa-solid fa-exclamation"></i></th>
+			<th><i class="fa-solid fa-magnifying-glass" onclick="activateBar()"></i></th>
 		</tr>
 		<?php
 			while ($res = mysqli_fetch_array($result)) {
@@ -45,5 +49,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM contact");
 			<i class="fas fa-user-plus"></i>
 		</a>
 	</div>	
+	<script src="./assets/scripts.js"></script>
 </body>
 </html>
