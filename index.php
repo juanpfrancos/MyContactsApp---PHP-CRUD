@@ -17,14 +17,14 @@ $result = mysqli_query($mysqli, "SELECT * FROM contact");
 
 <body>
 	<div id="searchContainer">
-		<input id="search" placeholder="Search">
-	</div>	
+		<input id="search" type="text" placeholder="Search" oninput="Search()" autofocus="autofocus">
+	</div>
 	<div id="add">
 		<a href="./actions/add.html">
 			<i class="fas fa-user-plus"></i>
 		</a>
 	</div>	
-	<table>
+	<table id="datatable">
 		<tr>
 			<th>Name <i class="fa-solid fa-user-tie"></i></th>
 			<th>Age <i class="fas fa-birthday-cake"></i></th>
@@ -42,8 +42,11 @@ $result = mysqli_query($mysqli, "SELECT * FROM contact");
 				echo "<td>" . $res['email'] . "</td>";
 				echo "<td colspan='2' class='actions'><a href=\"./actions/edit.php?id=$res[id]\"><i class='fas fa-edit'></i></a> | 
 								<a href=\"./actions/delete.php?id=$res[id]\" 
-									onClick=\"return confirm('Are you sure you want to delete?')\"><i class='fas fa-trash'></i>
-								</a>
+									onClick=\"return confirm('Are you sure you want to delete?')\"><i class='fas fa-trash'></i></a>
+								| 
+								<a href=\"tel:$res[phone]\">
+									<i class='fa-solid fa-phone'></i></a>
+								|<a href=\"mailto:$res[email]\"><i class='fa-solid fa-envelope'></i></a>
 					  </td>";
 			}
 		?>
